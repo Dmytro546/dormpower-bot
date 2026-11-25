@@ -1,0 +1,20 @@
+{
+  "name": "dormpower-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DormPower Bot — моніторинг енергоспоживання гуртожитку (Лабораторні №3–№20)",
+  "main": "bot.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bot.js",
+    "seed": "node seed.js",
+    "check": "node tests/check_batch_a.js",
+    "test:all": "node tests/check_batch_a.js && node tests/check_scheduler.js && node tests/check_broadcast.js && node tests/check_weather.js && node tests/check_simulator.js && node tests/check_stream.js && node tests/check_chart.js && node tests/check_dashboard.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "telegraf": "^4.16.3"
+  }
+}
